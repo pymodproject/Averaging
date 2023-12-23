@@ -1,4 +1,4 @@
-MODELLER Averaging for Protein Structure Prediction
+# MODELLER Averaging for Protein Structure Prediction
 
 This repository contains a script for utilizing averaging methods in MODELLER for protein structure prediction. The script is designed to enhance the accuracy and reliability of predicted protein structures through model averaging.
 Authors
