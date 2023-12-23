@@ -30,6 +30,6 @@ Notes
 - The final averaged model will be written to the specified output file.
 - If you want to build multiple averaged models for the same protein, remember to change the random seed of MODELLER within the script, by adding the lines:
 
-    random_seed = 42
-    env.io.random_seed = random_seed
+      random_seed = 42
+      env.io.random_seed = random_seed
 
