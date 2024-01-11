@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     # Initialize an 'automodel' object using the 'Automodel_averaging' class.
     a = Automodel_averaging(env, alnfile=args.alnfile,
-                            knowns=args.knowns, sequence=args.sequence)
+                            knowns=args.knowns.split(","), sequence=args.sequence)
     
     # Set other parameters based on command-line arguments
     a.md_level = refine.slow
