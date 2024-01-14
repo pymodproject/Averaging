@@ -8,8 +8,8 @@ Command-line Arguments
 The script can be executed from the command line with the following options:
 
     --alnfile: Path to the alignment file (e.g., 'tar_tem_alignment.ali').
-    --knowns: Target structure name (e.g., '1bdm').
-    --sequence: Label (e.g., 'TvLDH').
+    --knowns: Target structure name in the alignment file (e.g., '1bdm').
+    --sequence: Sequence name in the alignment file (e.g., 'TvLDH').
 
 Optional Arguments
 
