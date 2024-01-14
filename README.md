@@ -15,7 +15,7 @@ Optional Arguments
 
     --n_jobs (default: 4): Number of parallel jobs to use during model averaging.
     --n_runs (default: 24): Number of MD runs to perform.
-    --model_name (default: 'TvLDH_averaged'): Name of the output model file.
+    --model_name (default: '_averaged_model'): Name of the output model file.
     --scoring_func (default: 'dope'): Scoring function for model evaluation.
     --select_top (default: 0.1): Fraction of top decoys to be used for averaging.
 
