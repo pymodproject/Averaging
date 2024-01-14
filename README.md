@@ -21,8 +21,12 @@ Optional Arguments
 
 Example Usage
 
+- Standard usage 
     python altmod_run_averaging.py --alnfile tar_tem_alignment.ali --knowns 1bdm --sequence TvLDH
 
+- Rescoring option
+    python altmod_run_averaging.py --alnfile 3bwm_4pyi_5zw4.ali --knowns 4pyi,5zw4 --sequence 3bwm --lig_rescoring True
+    
 Notes
 
 - The script initializes an 'automodel' object using the Automodel_averaging class.
