@@ -12,6 +12,7 @@ import subprocess
 from Bio.PDB import PDBParser, NeighborSearch
 from Bio.SVDSuperimposer import SVDSuperimposer
 import numpy as np
+import shutil
 
 
 def extract_ligand(pdb_file, output_file):
@@ -180,6 +181,20 @@ def parse_arguments():
 if __name__ == '__main__':
     args = parse_arguments()
 
+    job_index = 1
+    while os.path.isdir("job_" + str(job_index)):
+        job_index += 1 
+
+    job_dir_name = "job_" + str(job_index)
+    os.mkdir(job_dir_name)
+    shutil.copy("smina.static", job_dir_name)
+    shutil.copy("sdsorter.static", job_dir_name)
+    shutil.copy(args.alnfile, job_dir_name)
+
+    for know in args.knowns.split(","):
+        shutil.copy(know + ".pdb", job_dir_name)
+    os.chdir(job_dir_name)
+    
     # Set up the environment.
     example_dirpath = os.path.dirname(__file__)
     env = environ()
@@ -234,4 +249,5 @@ if __name__ == '__main__':
         titles = extract_titles("rescored.txt")
         combine_pdb_files(titles[:10], 'rescored_combined.pdb')  
 
-        os.chdir("..")
+    
+    os.chdir("..")
